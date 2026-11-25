@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>3D-глобус — TravelMap</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://js.arcgis.com/4.32/esri/themes/light/main.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/map.css">
+</head>
+<body>
+  <header class="map-topbar">
+    <a class="brand" href="index.html"><span class="brand-mark">T</span><span>TravelMap</span></a>
+    <nav class="map-nav"><a href="index.html">Главная</a><a class="active" href="map.html">Карта</a><a href="destinations.html">Направления</a><a href="planner.html">Маршруты</a><a href="favorites.html">Избранное <span class="favorite-count">0</span></a></nav>
+  </header>
+  <main class="globe-layout">
+    <section class="globe-stage" aria-label="Интерактивный 3D-глобус">
+      <div id="viewDiv"></div>
+      <div class="globe-loading" id="globeLoading">
+        <span class="loading-orbit"></span>
+        <span>Загрузка планеты Земля</span>
+      </div>
+
+      <div class="globe-search-shell">
+        <i data-lucide="search" class="lucide-icon" aria-hidden="true"></i>
+        <div id="mapSearch"></div>
+      </div>
+
+      <aside class="globe-panel" id="globePanel" aria-live="polite">
+        <button class="panel-close" id="panelClose" type="button" aria-label="Закрыть карточку">
+          <i data-lucide="x" class="lucide-icon"></i>
+        </button>
+        <div id="globePanelContent">
+          <p class="eyebrow dark">Исследуйте мир</p>
+          <h1>Выберите место</h1>
+          <p>Найдите страну, город, поселок или достопримечательность.</p>
+        </div>
+      </aside>
+
+      <div class="globe-controls">
+        <button id="zoomIn" type="button" aria-label="Приблизить"><i data-lucide="plus" class="lucide-icon"></i></button>
+        <button id="zoomOut" type="button" aria-label="Отдалить"><i data-lucide="minus" class="lucide-icon"></i></button>
+        <button id="resetGlobe" type="button" aria-label="Показать всю Землю"><i data-lucide="globe-2" class="lucide-icon"></i></button>
+      </div>
+
+      <div class="globe-status" id="mapStatus">Загрузка глобуса...</div>
+    </section>
+  </main>
+  <script>
+    // Optional: add your ArcGIS API key here, for example:
+    // window.TRAVELMAP_ARCGIS_API_KEY = "YOUR_ARCGIS_API_KEY";
+  </script>
+  <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+  <script src="js/icon-system.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="https://js.arcgis.com/4.32/"></script>
+  <script src="js/map.js"></script>
+</body>
+</html>

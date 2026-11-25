@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Направления — TravelMap</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="nav-shell">
+      <a class="brand" href="index.html"><span class="brand-mark">T</span><span>TravelMap</span></a>
+      <button class="menu-toggle" aria-label="Открыть меню"><i data-lucide="menu" class="lucide-icon"></i></button>
+      <nav class="nav-links"><a href="index.html">Главная</a><a href="map.html">Карта</a><a class="active" href="destinations.html">Направления</a><a href="planner.html">Маршруты</a><a href="favorites.html">Избранное <span class="favorite-count">0</span></a></nav>
+      <a class="nav-cta" href="planner.html">Начать путешествие</a>
+    </div>
+  </header>
+  <main>
+    <section class="page-header"><div class="page-header-inner"><p class="eyebrow">Каталог путешествий</p><h1>Интересные места</h1></div></section>
+    <section class="section">
+      <div class="toolbar" style="margin-bottom:28px">
+        <input id="destinationSearch" type="search" placeholder="Поиск по названию, городу или стране">
+        <select id="categoryFilter"><option value="">Все категории</option><option value="history">Исторические места</option><option value="nature">Природа</option><option value="architecture">Архитектура</option><option value="food">Рестораны и кафе</option><option value="hotel">Отели</option><option value="entertainment">Развлечения</option><option value="photos">Фото места</option></select>
+        <select id="sortFilter"><option value="popularity">По популярности</option><option value="rating">По рейтингу</option><option value="duration">По длительности</option></select>
+      </div>
+      <div class="catalog-grid" id="destinationCatalog"></div>
+    </section>
+  </main>
+  <footer><a class="brand footer-brand" href="index.html"><span class="brand-mark">T</span><span>TravelMap</span></a><p>Путешествуйте дальше.</p></footer>
+  <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+  <script src="js/icon-system.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/destinations.js"></script>
+</body>
+</html>

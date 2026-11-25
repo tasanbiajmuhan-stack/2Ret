@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Избранное — TravelMap</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="nav-shell">
+      <a class="brand" href="index.html"><span class="brand-mark">T</span><span>TravelMap</span></a>
+      <button class="menu-toggle" aria-label="Открыть меню"><i data-lucide="menu" class="lucide-icon"></i></button>
+      <nav class="nav-links"><a href="index.html">Главная</a><a href="map.html">Карта</a><a href="destinations.html">Направления</a><a href="planner.html">Маршруты</a><a class="active" href="favorites.html">Избранное <span class="favorite-count">0</span></a></nav>
+      <a class="nav-cta" href="planner.html">Начать путешествие</a>
+    </div>
+  </header>
+  <main>
+    <section class="page-header"><div class="page-header-inner"><p class="eyebrow">Сохраненные места</p><h1>Ваше избранное</h1></div></section>
+    <section class="section"><div class="catalog-grid" id="favoritesCatalog"></div></section>
+  </main>
+  <footer><a class="brand footer-brand" href="index.html"><span class="brand-mark">T</span><span>TravelMap</span></a><p>Путешествуйте дальше.</p></footer>
+  <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+  <script src="js/icon-system.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/favorites.js"></script>
+</body>
+</html>

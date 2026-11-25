@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Планировщик — TravelMap</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/planner.css">
+</head>
+<body>
+  <header class="topbar planner-topbar">
+    <div class="nav-shell">
+      <a class="brand" href="index.html"><span class="brand-mark">T</span><span>TravelMap</span></a>
+      <button class="menu-toggle" aria-label="Открыть меню"><i data-lucide="menu" class="lucide-icon"></i></button>
+      <nav class="nav-links"><a href="index.html">Главная</a><a href="map.html">Карта</a><a href="destinations.html">Направления</a><a class="active" href="planner.html">Маршруты</a><a href="favorites.html">Избранное <span class="favorite-count">0</span></a></nav>
+      <a class="nav-cta" href="#plannerForm">Новый маршрут</a>
+    </div>
+  </header>
+  <main>
+    <section class="planner-hero">
+      <div class="planner-hero-copy"><p class="eyebrow">Планировщик путешествий</p><h1>Алматы<br>собрана для вас</h1></div>
+    </section>
+    <section class="planner-shell">
+      <aside class="planner-form-wrap">
+        <form id="plannerForm">
+          <h2>Параметры поездки</h2>
+          <label>Страна<select id="country"><option>Казахстан</option><option>Кыргызстан</option><option>Узбекистан</option></select></label>
+          <label>Город<select id="city"><option>Алматы</option><option>Астана</option></select></label>
+          <div class="form-row"><label>Дата начала<input id="startDate" type="date"></label><label>Дней<select id="dayCount"><option value="3">3 дня</option><option value="5">5 дней</option><option value="7" selected>7 дней</option><option value="10">10 дней</option></select></label></div>
+          <fieldset><legend>Интересы</legend><div class="interest-grid">
+            <label><input type="checkbox" value="nature" checked> <span><i data-lucide="trees" class="lucide-icon"></i> Природа</span></label>
+            <label><input type="checkbox" value="history" checked> <span><i data-lucide="landmark" class="lucide-icon"></i> История</span></label>
+            <label><input type="checkbox" value="architecture" checked> <span><i data-lucide="building-2" class="lucide-icon"></i> Архитектура</span></label>
+            <label><input type="checkbox" value="food" checked> <span><i data-lucide="utensils" class="lucide-icon"></i> Кафе</span></label>
+          </div></fieldset>
+          <label>Бюджет<select id="budget"><option value="economy">Экономный</option><option value="comfort" selected>Комфортный</option><option value="premium">Премиум</option></select></label>
+          <button class="generate-button" type="submit">Составить маршрут</button>
+        </form>
+      </aside>
+      <div class="itinerary-wrap">
+        <div class="itinerary-head">
+          <div><p class="eyebrow dark">Ваше путешествие</p><h2 id="itineraryTitle">Маршрут на 7 дней</h2></div>
+          <div class="itinerary-actions"><button id="saveRoute">Сохранить</button><button id="printRoute">Печать</button><a id="openMap" href="map.html">На карте</a></div>
+        </div>
+        <div class="trip-summary" id="tripSummary"></div>
+        <div class="day-cards" id="dayCards"></div>
+      </div>
+    </section>
+  </main>
+  <footer><a class="brand footer-brand" href="index.html"><span class="brand-mark">T</span><span>TravelMap</span></a><p>Путешествуйте дальше.</p></footer>
+  <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+  <script src="js/icon-system.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/planner.js"></script>
+</body>
+</html>
